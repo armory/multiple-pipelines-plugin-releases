@@ -1,2 +1,17 @@
 [
+  {
+    "id": "Armory.RunMultiplePipelines",
+    "description": "This plugin adds a new custom stage to Spinnaker to trigger multiple child pipelines.",
+    "provider": "https://armory.io",
+    "releases": [
+      {
+        "version": "1.0.0",
+        "date": "2022-04-20T18:28:13.817714Z",
+        "requires": "orca>=0.0.0,deck>=0.0.0",
+        "sha512sum": "65bce61c376a5fb8c622dabe0d81ee7358ce5727d9ca2c7c89c9964bdfb86ced2d2a4eca64c3df34f93401f82bfd002af0669a8e73c62c7e1184421c561328b9",
+        "state": "",
+        "url": "https://github.com/armory/multiple-pipelines-plugin-releases/releases/download/v1.0.0/spinnaker-multiple-pipelines-v1.0.0.zip"
+      }
+    ]
+  }
 ]
