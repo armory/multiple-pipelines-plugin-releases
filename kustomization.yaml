@@ -1,0 +1,2 @@
+patchesStrategicMerge:
+  - plugins/custom/patch-plugin-multiple-pipelines.yml
