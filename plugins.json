@@ -5,6 +5,14 @@
     "provider": "https://armory.io",
     "releases": [
       {
+        "version": "1.0.2",
+        "date": "2022-05-04T15:36:52.696366Z",
+        "requires": "orca>=0.0.0,deck>=0.0.0",
+        "sha512sum": "61baa81bf88a0b544d4e9362ebc97b801349f1462c074d7225fc59b3aab17e0df1ea40f99409bab795049921a83cbcec192b9e0f73ef50761d20354d98e62ef8",
+        "state": "",
+        "url": "https://github.com/armory/multiple-pipelines-plugin-releases/releases/download/v1.0.2/spinnaker-multiple-pipelines-v1.0.2.zip"
+      },
+      {
         "version": "1.0.0",
         "date": "2022-04-20T18:28:13.817714Z",
         "requires": "orca>=0.0.0,deck>=0.0.0",
