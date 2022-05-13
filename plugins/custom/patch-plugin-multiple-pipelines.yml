@@ -17,7 +17,6 @@ spec:
               plugins:
                 Armory.RunMultiplePipelines:
                   enabled: true
-                  version: 1.0.0
             repositories:
               runMultiplePipelinesRepo:
                 url: https://raw.githubusercontent.com/armory/multiple-pipelines-plugin-releases/main/plugins.json
@@ -27,7 +26,6 @@ spec:
            plugins:
              Armory.RunMultiplePipelines:
               enabled: true
-              version: 1.0.0
               extensions:
                 armory.runMultiplePipelinesStage:
                   enabled: true

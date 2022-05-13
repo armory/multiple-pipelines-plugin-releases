@@ -1,0 +1,83 @@
+#-----------------------------------------------------------------------------------------------------------------
+# Example configuration for enabling a plugin into spinnaker
+#-----------------------------------------------------------------------------------------------------------------
+apiVersion: spinnaker.armory.io/v1alpha2
+kind: SpinnakerService
+metadata:
+  name: spinnaker
+spec:
+  spinnakerConfig:
+    profiles:
+      # Configs in the spinnaker profile get applied to all services
+      spinnaker:
+        spinnaker:
+          extensibility:
+            repositories:
+              RunMultiplePipelines:
+                enabled: true
+                # The init container will install plugins.json to this path.
+                url: file:///opt/spinnaker/lib/local-plugins/smp/plugins.json
+
+
+      gate:
+        spinnaker:
+          extensibility:
+            deck-proxy:
+              enabled: true
+              plugins:
+                Armory.RunMultiplePipelines:
+                  enabled: true
+
+      orca:
+        spinnaker:
+          extensibility:
+            plugins:
+              Armory.RunMultiplePipelines:
+                enabled: true
+
+  kustomize:
+    orca:
+      deployment:
+        patchesStrategicMerge:
+          - |
+            spec:
+              template:
+                spec:
+                  initContainers:
+                  - name: spinnaker-multiple-pipelines
+                    image: armory/spinnaker-multiple-pipelines-plugin:1.0.2
+                    imagePullPolicy: Always
+                    volumeMounts:
+                      - mountPath: /opt/smp/target
+                        name: spinnaker-multiple-pipelines-plugin
+                  containers:
+                  - name: orca
+                    volumeMounts:
+                      - mountPath: /opt/spinnaker/lib/local-plugins
+                        name: spinnaker-multiple-pipelines-plugin
+                  volumes:
+                  - name: spinnaker-multiple-pipelines-plugin
+                    emptyDir: {}
+              
+    gate:
+      deployment:
+        patchesStrategicMerge:
+          - |
+            spec:
+              template:
+                spec:
+                  initContainers:
+                  - name: spinnaker-multiple-pipelines
+                    image: armory/spinnaker-multiple-pipelines-plugin:1.0.2
+                    imagePullPolicy: Always
+                    volumeMounts:
+                      - mountPath: /opt/smp/target
+                        name: spinnaker-multiple-pipelines-plugin
+                  containers:
+                  - name: gate
+                    volumeMounts:
+                      - mountPath: /opt/spinnaker/lib/local-plugins
+                        name: spinnaker-multiple-pipelines-plugin
+                  volumes:
+                  - name: spinnaker-multiple-pipelines-plugin
+                    emptyDir: {}
