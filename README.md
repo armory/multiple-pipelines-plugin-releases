@@ -11,7 +11,7 @@ Minimum tested version is 2.26.x
 
 NOTE: The plugin is not actively tested in all compatible versions with all variants, but is expected to work in the above.
 
-Check [release notes](https://github.com/armory/spinnaker-multiple-pipelines#release-notes) for more info
+Check [release notes](https://github.com/armory/multiple-pipelines-plugin-releases#release-notes) for more info
 
 # Installation & Configuration
 Note: alternative you can consume the plugin using this example patch as well. [example](https://github.com/armory/multiple-pipelines-plugin-releases/blob/main/plugins/custom/patch-plugin-multiple-pipelines-2.yml)
