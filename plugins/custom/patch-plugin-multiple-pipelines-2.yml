@@ -45,7 +45,7 @@ spec:
                 spec:
                   initContainers:
                   - name: spinnaker-multiple-pipelines
-                    image: armory/spinnaker-multiple-pipelines-plugin:1.0.2
+                    image: armory/spinnaker-multiple-pipelines-plugin:1.0.7
                     imagePullPolicy: Always
                     volumeMounts:
                       - mountPath: /opt/smp/target
@@ -68,7 +68,7 @@ spec:
                 spec:
                   initContainers:
                   - name: spinnaker-multiple-pipelines
-                    image: armory/spinnaker-multiple-pipelines-plugin:1.0.2
+                    image: armory/spinnaker-multiple-pipelines-plugin:1.0.7
                     imagePullPolicy: Always
                     volumeMounts:
                       - mountPath: /opt/smp/target
