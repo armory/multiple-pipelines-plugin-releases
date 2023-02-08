@@ -5,7 +5,7 @@
     "provider": "https://armory.io",
     "releases": [
       {
-        "version": "v1.1.0",
+        "version": "1.1.0",
         "date": "2023-02-07T23:26:23.940764Z",
         "requires": "orca>=0.0.0,deck>=0.0.0",
         "sha512sum": "0a6a67b3e3387af537f5e962fc91863a8d132fcba8f526bca5a3021387ad7a550fe065adcc49bdfffb1653ee6a22218a7112c8d7545900073edc0cc6fd0b1189",
