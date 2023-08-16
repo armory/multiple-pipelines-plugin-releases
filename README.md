@@ -11,6 +11,7 @@ Minimum tested version is 2.26.x
 | 1.0.5 <= |  2.27.x |
 | 1.0.6 <= |  2.27.x |
 | 1.0.7 <= |  2.27.x |
+| 1.1.2 >= | 	2.27.x |
 
 NOTE: The plugin is not actively tested in all compatible versions with all variants, but is expected to work in the above.
 
@@ -32,7 +33,7 @@ spinnakerConfig:
             plugins:
               Armory.RunMultiplePipelines:
                 enabled: true
-                version: 1.0.7
+                version: 1.1.2
           repositories:
             runMultiplePipelinesRepo:
               url: https://raw.githubusercontent.com/armory/multiple-pipelines-plugin-releases/main/plugins.json
@@ -42,7 +43,7 @@ spinnakerConfig:
           plugins:
             Armory.RunMultiplePipelines:
             enabled: true
-            version: 1.0.7
+            version: 1.1.2
             extensions:
               armory.runMultiplePipelinesStage:
                 enabled: true
